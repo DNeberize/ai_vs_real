@@ -1,0 +1,26 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Datasets and archives
+data/
+dataset/
+dataset_subset/
+*.zip
+
+# Model artifacts and training outputs
+*.pth
+*.pt
+*.ckpt
+runs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
