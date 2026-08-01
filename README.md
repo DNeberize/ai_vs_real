@@ -8,7 +8,7 @@ A Google Colab notebook for training an image classifier that distinguishes AI-g
 
 | Project | Repository | Purpose |
 | --- | --- | --- |
-| **Frontend** | **[DNeberize/ai-or-real](https://github.com/DNeberize/ai-or-real)** | Website interface for uploading images and viewing predictions |
+| **Frontend** | **[DNeberize/ai-or-real](https://github.com/DNeberize/ai-or-real-front)** | Website interface for uploading images and viewing predictions |
 | **Backend** | **[DNeberize/ai-vs-real-backend](https://github.com/DNeberize/ai-vs-real-backend)** | API that loads the trained model and processes prediction requests |
 | **Model training** | **This repository** | Google Colab workflow used to train and export the classifier |
 
