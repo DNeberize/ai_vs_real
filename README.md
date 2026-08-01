@@ -59,7 +59,7 @@ Compressed.zip
 ├── TRAIN/
 │   ├── FAKE/
 │   └── REAL/
-├── VAL/                  # Optional; otherwise 15% of TRAIN is used
+├── VAL/                  # Optional; otherwise 20% of TRAIN is used
 │   ├── FAKE/
 │   └── REAL/
 └── TEST/                 # Optional, but recommended for final evaluation
@@ -85,11 +85,11 @@ The first model run may download pretrained EfficientNet weights. Standard Colab
 
 - mounts Google Drive and extracts the dataset into the temporary Colab runtime;
 - caches dataset information to avoid unnecessary extraction;
-- creates a stratified validation split when a `VAL` folder is not supplied;
+- creates a stratified 80/20 training-validation split when a `VAL` folder is not supplied;
 - applies image augmentation and ImageNet normalization;
 - fine-tunes an EfficientNetV2-S binary classifier;
 - uses mixed-precision training when a GPU is available;
-- tracks loss, accuracy, and macro F1 score;
+- tracks training and validation loss, accuracy, and macro F1 score;
 - saves resumable checkpoints and stops early when validation F1 stops improving;
 - evaluates the best checkpoint on `TEST`, when present;
 - predicts an uploaded image as `AI-Generated` or `Real`.
@@ -101,9 +101,10 @@ The main settings are near the beginning of the notebook:
 | Setting | Default | Purpose |
 | --- | ---: | --- |
 | `RESUME_FROM_LAST` | `True` | Continue the latest saved run |
-| `TARGET_TOTAL_EPOCHS` | `20` | Total number of training epochs |
-| `VAL_FRACTION` | `0.15` | Validation fraction when `VAL` is absent |
+| `TARGET_TOTAL_EPOCHS` | `12` | Total number of training epochs |
+| `VAL_FRACTION` | `0.20` | Validation fraction when `VAL` is absent |
 | `RANDOM_SEED` | `42` | Reproducible data split and training seed |
+| `ENABLE_JPEG_AUG` | `True` | Apply low-probability JPEG compression augmentation |
 | `TRAIN_IMAGE_SIZE` | `224` | Input image size |
 | `TRAIN_BATCH_SIZE` | `128` | Training batch size |
 | `EVAL_BATCH_SIZE` | `256` | Validation and test batch size |
