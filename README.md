@@ -4,7 +4,7 @@ A Google Colab notebook for training an image classifier that distinguishes AI-g
 
 ## Live website and source code
 
-### [Open the live AI vs. Real website →](http://r48ow0g404cc0og8s04o8csw.46.225.136.253.sslip.io/)
+### [Open the live AI vs. Real website →](https://ai-vs-real.duckdns.org/)
 
 | Project | Repository | Purpose |
 | --- | --- | --- |
